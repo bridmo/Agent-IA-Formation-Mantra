@@ -1,0 +1,12 @@
+{
+  "_comment": "Déclarez ici les serveurs de développement pour prévisualiser vos pages dans le navigateur intégré. Exemple pour un dossier de pages statiques.",
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pages",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "channels/cro", "-p", "4173", "-c-1"],
+      "port": 4173
+    }
+  ]
+}

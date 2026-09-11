@@ -1,0 +1,69 @@
+{
+  "skill_name": "paid-ads",
+  "calibration": "à faire",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Nos campagnes Google Ads remontent 118 conversions sur IA Générative avec un CPA de 9€. C'est excellent non ? On scale ?",
+      "expected_output": "Ne doit PAS prendre le chiffre pour argent comptant. Doit expliquer que la colonne Conversions mélange des imports offline CRM empilés (plusieurs étapes du funnel primaires en même temps = même prospect compté 3-4×). Doit tirer la donnée segmentée par segments.conversion_action_name via channels/paid/google-ads/google_ads.py avant de conclure. Doit identifier le vrai événement (l'événement qui correspond vraiment à un lead qualifié) et recalculer un CPL réel. Doit refuser de juger 'scale' sans objectif mesurable et sans avoir vérifié le gisement (IS/rang).",
+      "assertions": [
+        "Refuse de raisonner sur la colonne Conversions brute",
+        "Explique le piège des conversions offline empilées",
+        "Segmente par segments.conversion_action_name via le puller",
+        "Identifie le vrai événement de lead qualifié",
+        "Demande/valide l'objectif avant de parler de scaling"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Cette campagne ne dépense que 36 € sur 65 € de budget quotidien. On augmente le budget pour avoir plus de leads ?",
+      "expected_output": "Doit d'abord tirer la part d'impressions et les pertes (search_budget_lost_impression_share vs search_rank_lost_impression_share). Doit reconnaître que si la campagne ne dépense pas son budget et perd surtout au rang/QS, le budget n'est PAS le levier. Doit diagnostiquer le Quality Score (souvent un ad group fourre-tout avec une RSA générique → QS bas). Doit recommander la restructuration en ad groups serrés plutôt que d'ajouter du budget.",
+      "assertions": [
+        "Tire IS + pertes budget/rang avant de répondre",
+        "Reconnaît que le budget n'est pas le levier si bridé au rang",
+        "Diagnostique le Quality Score par mot-clé",
+        "Recommande ad groups serrés plutôt que du budget"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Voici 6 nouvelles annonces que j'ai préparées, pousse-les en live sur la campagne.",
+      "expected_output": "Doit valider les longueurs (titres ≤30, desc ≤90, RSA 3-15/2-4) via le writer en dry-run. Doit afficher l'intégralité du copy en clair (titres ET descriptions, ligne par ligne) et demander une validation séparée du texte — un 'pousse' ne vaut pas approbation du copy. Doit passer par dry-run du writer, montrer le payload, obtenir le feu vert explicite, puis --execute, puis vérifier l'état live. Doit croiser la voix de marque (anti-pattern: vocabulaire de douleur brut type 'sans bricoler').",
+      "assertions": [
+        "Valide les longueurs en dry-run avant tout push",
+        "Affiche titres ET descriptions en clair pour validation",
+        "Distingue validation copy et go d'exécution",
+        "Dry-run → feu vert → execute → vérification live",
+        "Applique la voix de marque / repère les anti-patterns copy"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Google me dit 'Composant Formulaire de lead manquant' avec diffusion limitée. On a fait une erreur ?",
+      "expected_output": "Doit expliquer que l'avertissement vient de l'objectif de catégorie SUBMIT_LEAD_FORM (l'action de lead importée du CRM) et qu'il est ignorable. Doit vérifier en live la vraie cause de la diffusion limitée (primary_status / MOST_ADS_UNDER_REVIEW = annonces en revue, normal sur des groupes d'annonces neufs). Doit déconseiller d'ajouter le formulaire natif Google (court-circuite la page de destination et l'argumentaire, leads moins qualifiés). Doit confirmer par la donnée que le goal de conversion est intact.",
+      "assertions": [
+        "Identifie l'origine de l'avertissement (catégorie SUBMIT_LEAD_FORM)",
+        "Vérifie en live la vraie cause (annonces en revue)",
+        "Déconseille le formulaire de lead natif et explique pourquoi",
+        "Confirme l'intégrité du goal de conversion par la donnée"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Écris-moi les annonces pour la campagne sur notre offre principale.",
+      "expected_output": "Doit lire channels/paid/context.md, brain/offre.md (prix, durée, garanties, ne rien inventer), brain/voice-tone.md et brain/messaging.md avant d'écrire. Doit respecter les limites de caractères. Doit appliquer la voix définie dans brain/voice-tone.md et n'utiliser que des preuves figurant dans brain/offre.md. Doit éviter les anti-patterns (douleur brute, hype, libellé d'offre inventé). Doit présenter le copy pour validation avant tout push.",
+      "assertions": [
+        "Lit le contexte de l'entreprise (offre, voix, ICP) avant d'écrire",
+        "N'invente aucun prix/durée/numéro de certif",
+        "Respecte les limites de caractères RSA",
+        "Applique la voix de marque et évite les anti-patterns",
+        "Présente le copy pour validation avant push"
+      ],
+      "files": []
+    }
+  ]
+}

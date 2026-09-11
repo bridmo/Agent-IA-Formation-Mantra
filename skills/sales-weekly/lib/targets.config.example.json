@@ -1,0 +1,22 @@
+{
+  "_comment": "Copiez en targets.config.json et remplacez par VOS objectifs. Les valeurs ci-dessous sont des exemples neutres, pas des références de marché.",
+
+  "ca_weekly_eur": 10000,
+  "weighted_pipeline_weekly_eur": 10000,
+  "monthly_ca_target_eur": 43300,
+  "avg_deal_target_eur": 1500,
+
+  "_activite_comment": "Effort commercial attendu sur chaque lead.",
+  "calls_per_lead_go_to_r1": 4,
+  "call_tried_rate_pct": 95,
+  "call_quality_rate_pct": 70,
+  "min_call_duration_ms": 120000,
+  "hygiene_pct": 100,
+
+  "_funnel_comment": "Taux de passage observés sur VOTRE funnel : mesurez-les avant de les fixer.",
+  "r2_reach_rate_pct": 35,
+  "decision_reach_rate_pct": 25,
+  "lead_to_won_conversion_pct": 10,
+  "avg_deal_for_weighting_eur": 1500,
+  "pipeline_coverage_ratio_target": 3.5
+}

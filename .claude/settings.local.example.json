@@ -1,0 +1,15 @@
+{
+  "_comment": "Copiez en settings.local.json (ignoré par git). Les permissions évitent de confirmer les mêmes commandes en boucle. N'autorisez que des commandes en lecture.",
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  }
+}

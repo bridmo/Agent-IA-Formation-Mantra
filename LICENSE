@@ -1,0 +1,46 @@
+Copyright (c) 2026 École Mantra (Mediabros)
+
+Tous droits réservés sur les éléments originaux de ce dépôt : la structure du repo,
+les cellules de travail et leurs boucles, les gabarits de `brain/`, le système de
+mémoire, la documentation, et les skills calibrés listés ci-dessous.
+
+Ce kit est fourni aux élèves de l'École Mantra dans le cadre de leur formation.
+Vous pouvez l'utiliser, le modifier et l'adapter à votre entreprise sans restriction.
+Vous ne pouvez pas le revendre ni le redistribuer tel quel comme produit.
+
+Skills originaux Mantra : paid-ads, seo-writer, seo-strategy, seo-deploy,
+marketing-strategy, marketing-analysis, marketing-weekly, gtm-strategy,
+growth-experiment, roadmap, sales-weekly, meta-ad-remix, meta-ad-video,
+ad-copy (calibration), design-brand, seo-gsc-fetch.
+
+--------------------------------------------------------------------------------
+COMPOSANTS TIERS
+
+Ce dépôt intègre des skills publiés sous licences ouvertes. Leurs licences
+s'appliquent aux fichiers concernés et leur mention est conservée comme ces
+licences l'exigent.
+
+MIT License — Copyright (c) 2025 Corey Haines (coreyhaines31/marketingskills)
+MIT License — Copyright (c) 2025 Eric Siu (ericosiu/ai-marketing-skills)
+MIT License — Copyright (c) 2025 GoMarble (meta-creative-analysis,
+              meta-tool-fundamentals, creative-research)
+CC BY        — Rob Palmer, pour le socle du skill ad-copy
+              (attribution : skills/ad-copy/UPSTREAM-README.md)
+claude-design — compte GitHub jiji262, pour le skill design
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

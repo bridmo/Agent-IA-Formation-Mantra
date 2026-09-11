@@ -1,0 +1,29 @@
+{
+  "_comment": "Copiez ce fichier en pipeline.config.json et remplacez chaque ID par le vôtre. Les IDs HubSpot sont propres à votre portail : Settings > Objects > Deals > Pipelines (l'ID est dans l'URL), ou GET /crm/v3/pipelines/deals avec votre token.",
+
+  "pipeline_id": "REMPLACEZ_PAR_VOTRE_PIPELINE_ID",
+
+  "_stages_comment": "La clé (en MAJUSCULES) est le nom logique utilisé par le code : ne la renommez pas. L'id et le label sont à vous. Supprimez les étapes que vous n'avez pas.",
+  "stages": {
+    "PROSPECTION":     { "id": "REMPLACEZ", "label": "Prospection" },
+    "A_CANDIDATE":     { "id": "REMPLACEZ", "label": "A postulé" },
+    "GO_TO_R1":        { "id": "REMPLACEZ", "label": "RDV 1 à planifier" },
+    "R1":              { "id": "REMPLACEZ", "label": "RDV 1 tenu" },
+    "R2":              { "id": "REMPLACEZ", "label": "RDV 2 tenu" },
+    "LONG_CONVERSION": { "id": "REMPLACEZ", "label": "Conversion longue" },
+    "DECISION":        { "id": "REMPLACEZ", "label": "En décision" },
+    "PAIEMENT":        { "id": "REMPLACEZ", "label": "Paiement" },
+    "DEAL_GAGNE":      { "id": "REMPLACEZ", "label": "Gagné" },
+    "DEAL_PERDU":      { "id": "REMPLACEZ", "label": "Perdu" },
+    "CHURN":           { "id": "REMPLACEZ", "label": "Churn" }
+  },
+
+  "_closed_comment": "Étapes terminales : sortent du pipeline actif dans les calculs.",
+  "closed_stages": ["DEAL_GAGNE", "DEAL_PERDU", "CHURN"],
+
+  "_qualif_comment": "Étapes considérées comme opportunité qualifiée (SQL).",
+  "qualified_stages": ["R2", "DECISION"],
+
+  "_tracked_comment": "Étapes dont on veut la date d'entrée, pour mesurer les temps de passage.",
+  "tracked_stage_entries": ["GO_TO_R1", "R2", "DECISION"]
+}
